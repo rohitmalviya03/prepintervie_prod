@@ -52,7 +52,7 @@ function insertRecords(){
      
 
 
-axios.post('http://127.0.0.1:8083/api/users/saveinterviewrecords', dataToSend)
+axios.post('http://159.65.154.205:8083/api/users/saveinterviewrecords', dataToSend)
   .then(response => {
     // Handle the API response here
     console.log('API Response:', response.data);
