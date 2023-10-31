@@ -130,7 +130,7 @@ const [isRecording, setIsRecording] = useState(false);
         formData.append('audio', blob);
   
         // Send the audio data to the Spring Boot API
-        fetch('http://127.0.0.1:8083/api/users/saveinterviewrecording/'+user, {
+        fetch('http://prep4interview.online/api/users/saveinterviewrecording/'+user, {
           method: 'POST',
           body: formData,
         })
