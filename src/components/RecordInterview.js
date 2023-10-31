@@ -165,7 +165,7 @@ const [isRecording, setIsRecording] = useState(false);
       <p>We've streamlined the recording process for your convenience. Below are the steps to initiate and save your interview recordings:</p>
 
       <div className="table-responsive">
-        <table className="table table-bordered">
+        <table className="table table-bordered border-primary">
           <thead className="thead-dark">
             <tr>
               <th>Step</th>
