@@ -52,7 +52,7 @@ function insertRecords(){
      
 
 
-axios.post('http://prep4interview.online/api/users/saveinterviewrecords', dataToSend)
+axios.post('https://prep4interview.online/api/users/saveinterviewrecords', dataToSend)
   .then(response => {
     // Handle the API response here
     console.log('API Response:', response.data);

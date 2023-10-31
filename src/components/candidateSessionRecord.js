@@ -32,7 +32,7 @@ function App() {
 
     console.log(useremail + userid);
     try {
-      const response = await Axios.get('http://prep4interview.online/api/users/downloadaudio/' + userid + '/' + useremail, {
+      const response = await Axios.get('https://prep4interview.online/api/users/downloadaudio/' + userid + '/' + useremail, {
         responseType: 'blob', // Response type should be 'blob'
       });
 
@@ -48,7 +48,7 @@ function App() {
   }
 
   useEffect(() => {
-    Axios.get('http://prep4interview.online/api/users/getinterviewrecords/' + useremail)
+    Axios.get('https://prep4interview.online/api/users/getinterviewrecords/' + useremail)
       .then(response => {
         setData(response.data);
         console.log(response.data);

@@ -42,7 +42,7 @@ export default function Dashboard() {
   
     const fetchData = async () => {
       
-      const response = await fetch('http://prep4interview.online/api/users/getquestion/'+location.state.value)
+      const response = await fetch('https://prep4interview.online/api/users/getquestion/'+location.state.value)
      
       const data1 = await response.json();
       setData(data1);
