@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { getUser,Cartlength } from '../Services/AuthService';
 import { Link ,useNavigate} from 'react-router-dom';
 import React, { Component ,useEffect ,useState} from 'react';
+import logo from './logo1.png';
 export default function NavBar(props) {
   const navigate=useNavigate();
   const user=getUser();
