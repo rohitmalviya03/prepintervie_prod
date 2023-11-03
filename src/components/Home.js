@@ -14,6 +14,9 @@ export default function Home() {
                                 <div className="fs-3 fw-light text-muted">Your ticket to coding interview success</div>
                                 <h1 className="display-3 fw-bolder mb-5"><span className="text-gradient d-inline">The ultimate coding interview prep experience</span></h1>
                                 <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
+
+                                <div className="badge bg-gradient-primary-to-secondary text-white mb-4"><div className="text-uppercase">✅ Mock Interviews  &middot; ✅ Self-Assessment &middot; ✅ Resource Library</div></div>
+                              
                                       </div>
                             </div>
                         </div>
@@ -26,7 +29,7 @@ export default function Home() {
             <div className="container px-5">
                 <div className="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div className="col-auto"><div className="small m-0">Copyright  &copy;  prep4interview 2023</div></div>
-                    <div className="col-auto"><div className="small m-0">For any query write an email to us @ codeasyhere@outlook.com</div></div>
+                    <div className="col-auto"><div className="small m-0">Support  @ codeasyhere@outlook.com</div></div>
                     
                     <div className="col-auto">
                         <Link className="small" to="usermanual">User Manual</Link>

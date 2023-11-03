@@ -19,6 +19,11 @@ function handleSelectChange(event) {
   }
   
  function selectLang(params) {
+  var lan=document.getElementsByName("language")[0].value;
+
+  if(lan=="-1"){alert("To Start an interview you have to select any language");
+return;
+}
   insertRecords();
     navigate('/interview', { state: { value: lang } });
 }  
@@ -70,7 +75,7 @@ axios.post('https://prep4interview.online/api/users/saveinterviewrecords', dataT
   <div class="form-group">
     <label for="exampleInputEmail1">Select Language</label>
     <select className="w-100 mt-2" id="country" name="language"  value={lang} onChange={handleSelectChange}>
-                                        <option value="">Select Language</option>
+                                        <option value="-1">Select Language</option>
                                         <option value="java">Java </option>
                                         <option value="python">Python</option>
                                       

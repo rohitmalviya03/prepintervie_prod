@@ -25,10 +25,10 @@ function App() {
 
 
 
-  const downloadAudio = async (email) => {
-
-    const userid = document.getElementById("userid").value;
-    const useremail = document.getElementById("useremail").value;
+  const downloadAudio = async (useremail,userid) => {
+console.log(useremail,userid);
+   // const userid = document.getElementById("userid").value;
+   // const useremail = document.getElementById("useremail").value;
 
     console.log(useremail + userid);
     try {
@@ -179,7 +179,7 @@ function App() {
                   <td>{formatDate(item.timestamp)}</td>
                   <td>{item.useremail}</td>
                   <td class="text-end">
-                    <button onClick={() => downloadAudio()} class="btn btn-primary">
+                    <button onClick={() => downloadAudio(item.useremail,item.id)} class="btn btn-primary">
                       <i class="bi bi-download"></i>
                     </button>
                     <i class="fa fa-ellipsis-h ms-2"></i>
