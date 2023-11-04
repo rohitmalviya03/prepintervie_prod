@@ -26,11 +26,11 @@ function App() {
 
 
   const downloadAudio = async (useremail,userid) => {
-console.log(useremail,userid);
+//console.log(useremail,userid);
    // const userid = document.getElementById("userid").value;
    // const useremail = document.getElementById("useremail").value;
 
-    console.log(useremail + userid);
+    //console.log(useremail + userid);
     try {
       const response = await Axios.get('https://prep4interview.online/api/users/downloadaudio/' + userid + '/' + useremail, {
         responseType: 'blob', // Response type should be 'blob'
@@ -43,6 +43,7 @@ console.log(useremail,userid);
       audioLink.download = 'audiofile.mp3';
       audioLink.click();
     } catch (error) {
+      alert("No recording found");
       console.error('Error downloading audio:', error);
     }
   }

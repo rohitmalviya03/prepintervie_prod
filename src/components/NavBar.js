@@ -78,12 +78,14 @@ console.log(useretype);
             <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>
              {!isLogged ? (<> <li class="nav-item"><Link class="nav-link" to="registration">Sign up</Link></li>
             <li class="nav-item"><Link class="nav-link" to="login">Login</Link></li>
+            <li class="nav-item"><Link class="nav-link" to="/">Find A Job</Link></li>
             </>
         ):( <> <Link to="userdashboard" className="nav-link" aria-current="page">
          Welcome {user} </Link>
          <Link to="CandidateSessionRecords" className="nav-link" aria-current="page">
         My Sessions </Link>
                 <Link className="nav-link" onClick={logout}>Logout</Link></>)} </ul>
+
     </div>
 </div>
 </nav>

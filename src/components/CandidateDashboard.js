@@ -60,7 +60,7 @@ function insertRecords(){
 axios.post('https://prep4interview.online/api/users/saveinterviewrecords', dataToSend)
   .then(response => {
     // Handle the API response here
-    console.log('API Response:', response.data);
+    //console.log('API Response:', response.data);
   })
   .catch(error => {
     // Handle any errors that occurred during the request.
@@ -68,7 +68,7 @@ axios.post('https://prep4interview.online/api/users/saveinterviewrecords', dataT
   });  
 
 }
-  console.log(lang)
+  //console.log(lang)
   return (
    <><div class="d-flex justify-content-center">
     <form>

@@ -32,7 +32,7 @@ export default function Login(props) {
   const data = new FormData();
   data.append('email',user.email);
   data.append('password',user.password);
- console.log("dad",data);
+ //console.log("dad",data);
 
   axios.post('https://prep4interview.online/api/users/authenticate', { email: user.email, password: user.password },{
    
@@ -40,9 +40,9 @@ export default function Login(props) {
   
   )
 .then(response => {
-  console.log('Form data submitted successfully!',response);
-  console.log('dgf',response.data.id);
-  console.log('Token',response.data.email);
+  //console.log('Form data submitted successfully!',response);
+  //console.log('dgf',response.data.id);
+  //c//onsole.log('Token',response.data.email);
   
   setUserSession(response.data.token, response.data.name,response.data.id,response.data.email);
   navigate("/userdashboard");window.location.reload(); 
