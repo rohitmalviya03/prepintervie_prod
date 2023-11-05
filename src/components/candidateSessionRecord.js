@@ -176,7 +176,7 @@ function App() {
                   <td><input class="form-check-input" type="checkbox" /></td>
                   <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">{item.domain}</span></td>
                   <input type="hidden" id="useremail" value={item.useremail}></input>
-                  <input type="hidden" id="userid" value={item.id}></input>
+                  <input type="text" id="userid" value={item.id}></input>
                   <td>{formatDate(item.timestamp)}</td>
                   <td>{item.useremail}</td>
                   <td class="text-end">

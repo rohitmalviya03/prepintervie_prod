@@ -24,7 +24,7 @@ function handleSelectChange(event) {
   if(lan=="-1"){alert("To Start an interview you have to select any language");
 return;
 }
-  insertRecords();
+
     navigate('/interview', { state: { value: lang } });
 }  
  

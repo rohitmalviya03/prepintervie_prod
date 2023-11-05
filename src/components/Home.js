@@ -5,6 +5,7 @@ export default function Home() {
   return (<>
    
       <header className="py-5">
+  
                 <div className="container px-5 pb-5">
                     <div className="row gx-5 align-items-center">
                         <div className="col-xxl-5">
@@ -24,6 +25,36 @@ export default function Home() {
                     </div>
                 </div>
             </header> 
+
+
+
+
+
+
+
+
+            <section className="py-5 " id="aboutus">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg">
+              <h2 className='text-primary'>About Us</h2>
+              <br></br>
+              <p className='text-muted'>
+                At Prep4interview, our mission is to empower individuals to succeed in their coding interviews. We believe that preparation and practice are the keys to unlocking your full potential.
+              </p>
+              <p className='text-muted'>
+                Our dedicated team of experts and developers is committed to providing you with the best tools and resources to excel in your interviews. We understand the challenges you face, and we are here to support you every step of the way.
+              </p>
+              <p className='text-muted'>
+                Join us on this journey, and let's work together to help you achieve your career goals.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <br></br>
   
     <footer className="bg-white py-4 mt-auto">
             <div className="container px-5">
