@@ -1,7 +1,38 @@
-import React from 'react';
+
 import Footer from './Footer';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 export default function Home() {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+        contactno:''
+      });
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+          ...formData,
+          [name]: value
+        });
+      };
+      const handleSubmit = (e) => {
+        e.preventDefault();
+
+        axios.post('http://localhost:8083//api/users/savesupportmsg', formData)
+        .then((response) => {
+          console.log(response.data.message);
+        })
+        .catch((error) => {
+          console.error('Error saving data:', error);
+        });
+    
+        // You can perform actions with the formData here, like sending it to an API or saving it to the state.
+        console.log(formData);
+      };
+
   return (<>
    
       <header className="py-5">
@@ -95,29 +126,29 @@ Benefit from the collective knowledge of experienced professionals who have succ
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                     
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" onSubmit={handleSubmit}>
                      
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required"   onChange={handleChange}/>
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                 
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email"  onChange={handleChange} />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                           
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <input class="form-control" id="phone" name="contactno" type="tel" placeholder="(123) 456-7890" data-sb-validations="required"  onChange={handleChange} />
                                 <label for="phone">Phone number</label>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                            
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..."  data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..."  data-sb-validations="required"  onChange={handleChange}></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
