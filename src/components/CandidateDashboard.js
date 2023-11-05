@@ -21,7 +21,10 @@ function handleSelectChange(event) {
  function selectLang(params) {
   var lan=document.getElementsByName("language")[0].value;
 
-  if(lan=="-1"){alert("To Start an interview you have to select any language");
+  if(lan=="-1"){
+    
+    alert("To Start an interview you have to select any language");
+    
 return;
 }
 

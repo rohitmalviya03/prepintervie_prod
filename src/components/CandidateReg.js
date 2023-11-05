@@ -3,6 +3,7 @@ import React, { useEffect, useState  } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+import Swal from 'sweetalert2'; // Import Swal
 export default function CandidateReg(props) {
     const initialFormState = {
         firstName: '',
@@ -32,7 +33,11 @@ export default function CandidateReg(props) {
     console.log(group);
     signUp(group).then(res=>{
         console.log("data send to APIxx`");
-        alert("Candidate registration Succesfully");
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: "Your registration has done successfully",
+          });
         navigate('/login');
     } ).catch(error => {
         setLoading(false);

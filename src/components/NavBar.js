@@ -4,6 +4,7 @@ import { getUser,Cartlength } from '../Services/AuthService';
 import { Link ,useNavigate} from 'react-router-dom';
 import React, { Component ,useEffect ,useState} from 'react';
 import logo from './logo1.png';
+import Swal from 'sweetalert2'; // Import Swal
 export default function NavBar(props) {
   const navigate=useNavigate();
   const user=getUser();
@@ -28,8 +29,14 @@ const logout = () => {
   sessionStorage.removeItem("id");
   sessionStorage.removeItem("usertype");
   setisLogged(false);
-  alert("Logout Done Successfully");
-  navigate("/");window.location.reload(); 
+  Swal.fire({
+    icon: 'success',
+    title: 'Success',
+    text: "You have logged out successfully",
+  });
+  navigate("/");
+  
+   
 };
 const useretype=sessionStorage.getItem('usertype');
 console.log(useretype);  

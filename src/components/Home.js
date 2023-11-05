@@ -3,6 +3,7 @@ import Footer from './Footer';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Swal from 'sweetalert2'; // Import Swal
 export default function Home() {
 
     const [formData, setFormData] = useState({
@@ -23,7 +24,12 @@ export default function Home() {
 
         axios.post('https://prep4interview.online/api/users/savesupportmsg', formData)
         .then((response) => {
-          console.log(response.data.message);
+         // console.log(response.data.message);
+         Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: "Your query has to be sent to Prep4interview",
+          });
         })
         .catch((error) => {
           console.error('Error saving data:', error);
@@ -126,7 +132,7 @@ Benefit from the collective knowledge of experienced professionals who have succ
                 <div class="row gx-5 justify-content-center">
                     <div class="col-lg-6">
                     
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN" onSubmit={handleSubmit}>
+                        <form id="contactForm"  onSubmit={handleSubmit}>
                      
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required"   onChange={handleChange}/>
