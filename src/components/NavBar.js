@@ -77,6 +77,7 @@ console.log(useretype);
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
             <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>
             <li class="nav-item"><a class="nav-link" href="/#aboutus">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#contactus">Contact Us</a></li>
              {!isLogged ? (<> <li class="nav-item"><Link class="nav-link" to="registration">Sign up</Link></li>
             <li class="nav-item"><Link class="nav-link" to="login">Login</Link></li>
      
